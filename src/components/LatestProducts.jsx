@@ -70,8 +70,8 @@ const LatestProducts = () => {
     <div className="py-28 px-12">
       <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
         <div>
-          <p className="font-mono text-brand-600 text-xs uppercase tracking-widest">Available Now</p>
-          <h2 className="font-heading font-bold text-3xl md:text-5xl section-title">Latest Products</h2>
+          <p className="section-label">Available Now</p>
+          <h2 className="section-title">Latest Products</h2>
         </div>
         <a href="#" className="btn btn-dark">
           View All

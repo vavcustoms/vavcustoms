@@ -45,6 +45,14 @@
   .btn-dark {
     @apply bg-darkbrown border-darkbrown text-white hover:bg-mutedbrown hover:border-mutedbrown;
   }
+
+  .section-label {
+    @apply font-mono text-brand-600 text-xs uppercase tracking-widest;
+  }
+
+  .section-title {
+    @apply font-heading font-bold text-3xl md:text-5xl;
+  }
 }
 
 body {
