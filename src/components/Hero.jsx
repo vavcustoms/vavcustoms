@@ -9,10 +9,10 @@ const Hero = () => {
     >
       <div className="flex items-center justify-center w-full h-screen bg-zinc-900/50">
         <div className="text-center">
-          <div className="container px-4 mx-auto">
-            <div className="max-w-4xl mx-auto text-center">
-              <img className="max-w-150" src={heroLogo} alt="VAV Customs Logo" />
-              <div className="flex items-center justify-center gap-4 mt-8">
+          <div className="container px-12 mx-auto">
+            <div className="w-full max-w-2xl mx-auto text-center">
+              <img className="w-full h-auto mx-auto mb-8" src={heroLogo} alt="VAV Customs Logo" />
+              <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
                 <a href="#" className="btn btn-primary">
                   Shop Products
                 </a>

@@ -59,4 +59,5 @@ body {
   background-color: var(--color-warmwhite);
   color: var(--color-dark);
   font-family: var(--font-body);
+  overflow-x: hidden;
 }

@@ -9,7 +9,7 @@ const AboutMe = () => {
             <img className="w-full aspect-4/5 object-cover object-left" src={aboutImg} alt="About Me" />
             <div className="absolute w-1/2 -bottom-5 -right-5 border-3 border-brand-500 -z-1 aspect-square"></div>
           </div>
-          <div className="text">
+          <div>
             <p className="section-label">Meet The Builder</p>
             <h2 className="section-title mb-6">Hey, I'm Vince</h2>
             <p className="text-darkbrown leading-7 mb-4">
