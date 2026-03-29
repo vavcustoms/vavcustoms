@@ -3,11 +3,8 @@ import heroLogo from "@/assets/images/VAV-Customs-Logo-Hero.png";
 
 const Hero = () => {
   return (
-    <section
-      className="w-full bg-center bg-cover md:bg-fixed"
-      style={{ background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${heroBg})` }}
-    >
-      <div className="flex items-center justify-center w-full h-screen bg-zinc-900/50">
+    <section className="w-full bg-center bg-cover md:bg-fixed" style={{ background: `url(${heroBg})` }}>
+      <div className="flex items-center justify-center w-full h-screen bg-darkbrown/75">
         <div className="text-center">
           <div className="container px-12 mx-auto">
             <div className="w-full max-w-2xl mx-auto text-center">

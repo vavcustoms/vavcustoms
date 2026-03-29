@@ -37,7 +37,7 @@ const CustomWork = () => {
             <h2 className="font-heading font-bold text-3xl">Have a custom project in mind?</h2>
             <p className="text-mutedbrown text-lg">Let us know how we can help!</p>
           </div>
-          <div className="justify-self-end">
+          <div className="justify-self-start mt-3 md:justify-self-end md:mt-0">
             <a href="#" className="btn btn-primary">
               Custom Build
             </a>

@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import aboutImg from "@/assets/images/about-me.jpg";
 
 const AboutMe = () => {
@@ -22,9 +23,9 @@ const AboutMe = () => {
               Want to see what goes on behind the scenes? Get a look at the tools, the process, and what he recommends.
             </p>
             <div className="flex flex-wrap gap-4 mt-8">
-              <a href="#" className="btn btn-primary">
+              <Link to="/the-shop" className="btn btn-primary">
                 Check Out The Shop
-              </a>
+              </Link>
               <a href="#" className="btn btn-dark">
                 Build With Me
               </a>
