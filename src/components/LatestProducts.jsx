@@ -67,29 +67,34 @@ const LatestProducts = () => {
   }
 
   return (
-    <div className="py-28 px-12">
-      <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
-        <div>
-          <p className="section-label">Available Now</p>
-          <h2 className="section-title">Latest Products</h2>
-        </div>
-        <a href="#" className="btn btn-dark">
-          View All
-        </a>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-lightbrown">
-        {products.map((product) => (
-          <div className="bg-warmwhite overflow-hidden transition duration-150 ease-in-out hover:-translate-y-1">
-            <img src={product.images.edges[0].node.url} alt={product.title} />
-            <div className="py-5 px-6">
-              <p className="font-heading font-bold text-lg mb-1">{product.title}</p>
-              <p className="text-dark-mid mb-4">{product.priceRange.minVariantPrice.amount}</p>
-              <button className="btn btn-dark w-full text-xs">Add to Cart</button>
-            </div>
+    <section className="py-28 px-12">
+      <div className="max-w-screen-2xl mx-auto">
+        <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
+          <div>
+            <p className="section-label">Available Now</p>
+            <h2 className="section-title">Latest Products</h2>
           </div>
-        ))}
+          <a href="#" className="btn btn-dark">
+            View All
+          </a>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-lightbrown">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="bg-warmwhite overflow-hidden transition duration-150 ease-in-out hover:-translate-y-1"
+            >
+              <img src={product.images.edges[0].node.url} alt={product.title} />
+              <div className="py-5 px-6">
+                <p className="font-heading font-bold text-lg mb-1">{product.title}</p>
+                <p className="text-dark-mid mb-4">${Number(product.priceRange.minVariantPrice.amount)?.toFixed(2)}</p>
+                <button className="btn btn-dark w-full text-xs">Add to Cart</button>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
