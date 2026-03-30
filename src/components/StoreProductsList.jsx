@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { shopifyClient } from "@/utils/shopifyClient";
 import ProductCard from "@/components/ProductCard";
 
-const LatestProducts = () => {
+const StoreProductsList = () => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const getProducts = async () => {
+    const fetchProducts = async () => {
       const query = `
         query {
-          products(first: 3) {
+          products(first: 20) {
             edges {
               node {
                 id
@@ -50,36 +49,26 @@ const LatestProducts = () => {
       `;
 
       try {
-        const { data } = await shopifyClient.request(query);
-        const productNodes = data.products.edges.map((edge) => edge.node);
-        setProducts(productNodes);
+        const response = await shopifyClient.request(query);
+        const fetchedProducts = response?.data?.products?.edges?.map((edge) => edge.node) || [];
+        setProducts(fetchedProducts);
+        console.log(fetchedProducts);
       } catch (error) {
         console.error("Error fetching products:", error);
-      } finally {
-        setLoading(false);
       }
     };
 
-    getProducts();
+    fetchProducts();
   }, []);
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
 
   return (
     <section className="py-28 px-12">
       <div className="max-w-screen-2xl mx-auto">
-        <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
-          <div>
-            <p className="section-label">Available Now</p>
-            <h2 className="section-title">Latest Products</h2>
-          </div>
-          <a href="#" className="btn btn-dark">
-            View All
-          </a>
+        <div className="mb-12">
+          <p className="section-label">Our Work</p>
+          <h2 className="section-title">Shop All Products</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-lightbrown">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0.5 bg-lightbrown">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
@@ -89,4 +78,4 @@ const LatestProducts = () => {
   );
 };
 
-export default LatestProducts;
+export default StoreProductsList;
