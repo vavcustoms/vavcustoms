@@ -29,6 +29,7 @@ const StorePage = () => {
           </div>
         </div>
       </div>
+      <section></section>
     </>
   );
 };
