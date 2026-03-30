@@ -10,7 +10,7 @@ import grid2 from "@/assets/images/grid-images/cutting2.jpg";
 import grid3 from "@/assets/images/grid-images/shelf2.jpg";
 import grid4 from "@/assets/images/grid-images/table2.jpg";
 
-const TheShop = () => {
+const TheShopPage = () => {
   return (
     <>
       <title>The Shop | VAV Customs</title>
@@ -184,4 +184,4 @@ const TheShop = () => {
   );
 };
 
-export default TheShop;
+export default TheShopPage;

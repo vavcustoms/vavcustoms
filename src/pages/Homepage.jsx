@@ -5,7 +5,7 @@ import CustomWork from "@/components/CustomWork";
 import ProjectGallery from "@/components/ProjectGallery";
 import AboutMe from "@/components/AboutMe";
 
-const Homepage = () => {
+const HomePage = () => {
   return (
     <>
       <title>Home | VAV Customs</title>
@@ -24,4 +24,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default HomePage;

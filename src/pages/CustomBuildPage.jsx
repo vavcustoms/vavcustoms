@@ -2,9 +2,18 @@ import fullBathroom from "@/assets/images/grid-images/bathroom2.jpeg";
 import bathroomVanity from "@/assets/images/grid-images/vanity1.jpg";
 import bathroomMirror from "@/assets/images/grid-images/mirror1.jpg";
 
-const CustomBuild = () => {
+const CustomBuildPage = () => {
   return (
     <>
+      <title>Custom Build | VAV Customs</title>
+      <meta
+        name="description"
+        content="Have a custom build that you're looking for? Fill out the form below to get started!"
+      />
+      <meta name="keywords" content="custom, one-of-a-kind, high quality" />
+      <meta name="author" content="VAV Customs" />
+      <link rel="canonical" href={`${window.location.origin}/custom-build`} />
+
       <div className="mt-14 md:mt-16.5 bg-darkbrown py-20 px-12 text-center">
         <p className="font-mono text-brand-500 text-sm uppercase tracking-widest mb-3">Handcrafted to Order</p>
         <h1 className="font-heading font-bold text-warmwhite text-3xl md:text-6xl">Custom Build</h1>
@@ -126,4 +135,4 @@ const CustomBuild = () => {
   );
 };
 
-export default CustomBuild;
+export default CustomBuildPage;
