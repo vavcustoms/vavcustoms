@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router";
+import { Routes, Route, ScrollRestoration } from "react-router";
 import Layout from "@/components/Layout";
 import HomePage from "@/pages/HomePage";
 import TheShopPage from "@/pages/TheShopPage";

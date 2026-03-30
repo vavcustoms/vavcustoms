@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 import { shopifyClient } from "@/utils/shopifyClient";
 import ProductCard from "@/components/ProductCard";
 
@@ -75,9 +76,9 @@ const LatestProducts = () => {
             <p className="section-label">Available Now</p>
             <h2 className="section-title">Latest Products</h2>
           </div>
-          <a href="#" className="btn btn-dark">
+          <Link to="/store" className="btn btn-dark">
             View All
-          </a>
+          </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-lightbrown">
           {products.map((product) => (

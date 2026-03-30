@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import heroBg from "@/assets/images/hero-bg.png";
 import heroLogo from "@/assets/images/VAV-Customs-Logo-Hero.png";
 
@@ -10,12 +11,12 @@ const Hero = () => {
             <div className="w-full max-w-2xl mx-auto text-center">
               <img className="w-full h-auto mx-auto mb-8" src={heroLogo} alt="VAV Customs Logo" />
               <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
-                <a href="#" className="btn btn-primary">
+                <Link to="/store" className="btn btn-primary">
                   Shop Products
-                </a>
-                <a href="#" className="btn btn-secondary">
+                </Link>
+                <Link to="/custom-build" className="btn btn-secondary">
                   Custom Build
-                </a>
+                </Link>
               </div>
             </div>
           </div>

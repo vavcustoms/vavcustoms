@@ -29,26 +29,33 @@ const Navbar = () => {
           </div>
         </div>
         <div
-          className={`absolute top-15 inset-x-0 z-50 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-darkbrown md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center font-mono font-light uppercase text-sm ${isNavOpen ? "translate-x-0 opacity-100 " : "opacity-0 translate-x-full"}`}
+          className={`absolute top-14 inset-x-0 z-50 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-darkbrown md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center font-mono font-light uppercase text-sm ${isNavOpen ? "translate-x-0 opacity-100 " : "opacity-0 translate-x-full"}`}
         >
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:mx-6">
-            <NavLink to="/" className={({ isActive }) => `${isActive ? activeClasses : inactiveClasses} ${baseClasses}`}>
+            <NavLink
+              to="/"
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) => `${isActive ? activeClasses : inactiveClasses} ${baseClasses}`}
+            >
               Home
             </NavLink>
             <NavLink
               to="/the-shop"
+              onClick={() => setIsOpen(false)}
               className={({ isActive }) => `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
             >
               The Shop
             </NavLink>
             <NavLink
               to="/custom-build"
+              onClick={() => setIsOpen(false)}
               className={({ isActive }) => `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
             >
               Custom Build
             </NavLink>
             <NavLink
               to="/store"
+              onClick={() => setIsOpen(false)}
               className={({ isActive }) => `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
             >
               Store

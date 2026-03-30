@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import tableImg from "@/assets/images/grid-images/table1.jpg";
 import cuttingBoardImg from "@/assets/images/grid-images/cutting1.jpg";
 import vanityImg from "@/assets/images/grid-images/vanity1.jpg";
@@ -38,9 +39,9 @@ const CustomWork = () => {
             <p className="text-mutedbrown text-lg">Let us know how we can help!</p>
           </div>
           <div className="justify-self-start mt-3 md:justify-self-end md:mt-0">
-            <a href="#" className="btn btn-primary">
+            <Link to="/custom-build" className="btn btn-primary">
               Custom Build
-            </a>
+            </Link>
           </div>
         </div>
       </div>
