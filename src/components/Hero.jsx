@@ -11,10 +11,10 @@ const Hero = () => {
             <div className="w-full max-w-2xl mx-auto text-center">
               <img className="w-full h-auto mx-auto mb-8" src={heroLogo} alt="VAV Customs Logo" />
               <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
-                <Link to="/store" className="btn btn-primary">
+                <Link to="/store" className="btn btn-primary" prefetch="none">
                   Shop Products
                 </Link>
-                <Link to="/custom-build" className="btn btn-secondary">
+                <Link to="/custom-build" className="btn btn-secondary" prefetch="none">
                   Custom Build
                 </Link>
               </div>

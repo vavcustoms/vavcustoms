@@ -1,9 +1,10 @@
-import { Routes, Route, ScrollRestoration } from "react-router";
+import { Routes, Route } from "react-router";
 import Layout from "@/components/Layout";
 import HomePage from "@/pages/HomePage";
 import TheShopPage from "@/pages/TheShopPage";
 import CustomBuildPage from "@/pages/CustomBuildPage";
 import StorePage from "@/pages/StorePage";
+import ProductDetailsPage from "@/pages/ProductDetailsPage";
 import NotFoundPage from "@/pages/NotFoundPage";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="custom-build" element={<CustomBuildPage />} />
         <Route path="store">
           <Route index element={<StorePage />} />
+          <Route path=":handle" element={<ProductDetailsPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

@@ -76,7 +76,7 @@ const LatestProducts = () => {
             <p className="section-label">Available Now</p>
             <h2 className="section-title">Latest Products</h2>
           </div>
-          <Link to="/store" className="btn btn-dark">
+          <Link to="/store" className="btn btn-dark" prefetch="none">
             View All
           </Link>
         </div>

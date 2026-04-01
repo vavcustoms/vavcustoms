@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Cart from "@/components/Cart";
 
 const Layout = ({ children }) => {
   return (
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
       <main>{children}</main>
 
       <Footer />
+      <Cart />
     </div>
   );
 };

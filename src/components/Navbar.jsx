@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink, Link } from "react-router";
 import { Menu, X, ShoppingCart } from "lucide-react";
 import miniLogo from "@/assets/images/mini-logo.png";
+import CartIcon from "@/components/CartIcon";
 
 const Navbar = () => {
   const [isNavOpen, setIsOpen] = useState(false);
@@ -43,6 +44,7 @@ const Navbar = () => {
               to="/the-shop"
               onClick={() => setIsOpen(false)}
               className={({ isActive }) => `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
+              prefetch="none"
             >
               The Shop
             </NavLink>
@@ -50,6 +52,7 @@ const Navbar = () => {
               to="/custom-build"
               onClick={() => setIsOpen(false)}
               className={({ isActive }) => `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
+              prefetch="none"
             >
               Custom Build
             </NavLink>
@@ -57,19 +60,14 @@ const Navbar = () => {
               to="/store"
               onClick={() => setIsOpen(false)}
               className={({ isActive }) => `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
+              prefetch="none"
             >
               Store
             </NavLink>
-            <div className="items-center gap-2 py-2 px-4 border border-warmwhite flex md:hidden">
-              <ShoppingCart className="w-4 h-4 text-warmwhite" />
-              <span className="font-mono text-warmwhite text-xs uppercase leading-none">Cart</span>
-            </div>
+            <CartIcon styles="flex md:hidden" />
           </div>
         </div>
-        <div className="items-center gap-2 py-2 px-4 border border-warmwhite hidden md:flex">
-          <ShoppingCart className="w-4 h-4 text-warmwhite" />
-          <span className="font-mono text-warmwhite text-xs uppercase leading-none">Cart</span>
-        </div>
+        <CartIcon styles="hidden md:flex" />
       </div>
     </nav>
   );

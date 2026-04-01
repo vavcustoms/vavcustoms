@@ -11,16 +11,14 @@ const AboutMe = () => {
             <div className="absolute w-1/2 -bottom-5 -right-5 border-3 border-brand-500 -z-1 aspect-square"></div>
           </div>
           <div>
-            <p className="section-label">Meet The Builder</p>
             <h2 className="section-title mb-6">Hey, I'm Vince</h2>
             <p className="text-darkbrown leading-7 mb-4">
-              Meet Vince, a skilled woodworker with over 20 years of experience in the trade. When not bringing his creative
-              visions to life through woodworking, he can be found out on the boat, enjoying a peaceful day of fishing. With
-              a passion for both the art of woodworking and the great outdoors, Vince brings a unique perspective to each of
-              his projects.
+              I'm skilled woodworker with over 20 years of experience in the trade. When not bringing my creative visions to
+              life through woodworking, I can be found out on the boat, enjoying a peaceful day of fishing. With a passion
+              for both the art of woodworking and the great outdoors, I bring a unique perspective to each of my projects.
             </p>
             <p className="text-darkbrown leading-7 mb-4">
-              Want to see what goes on behind the scenes? Get a look at the tools, the process, and what he recommends.
+              Want to see what goes on behind the scenes? Get a look at the tools, the process, and what I recommend.
             </p>
             <div className="flex flex-wrap gap-4 mt-8">
               <Link to="/the-shop" className="btn btn-primary">

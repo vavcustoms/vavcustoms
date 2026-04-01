@@ -39,7 +39,7 @@ const CustomWork = () => {
             <p className="text-mutedbrown text-lg">Let us know how we can help!</p>
           </div>
           <div className="justify-self-start mt-3 md:justify-self-end md:mt-0">
-            <Link to="/custom-build" className="btn btn-primary">
+            <Link to="/custom-build" className="btn btn-primary" prefetch="none">
               Custom Build
             </Link>
           </div>
