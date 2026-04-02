@@ -129,7 +129,6 @@ const CartProvider = ({ children }) => {
         variables: { id: product.id },
       });
 
-      // Check for GraphQL errors
       if (response.errors && response.errors.graphQLErrors) {
         console.error("GraphQL errors:", response.errors.graphQLErrors);
         throw new Error(`GraphQL Error: ${response.errors.graphQLErrors[0]?.message || "Unknown GraphQL error"}`);

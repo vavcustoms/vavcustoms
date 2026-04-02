@@ -26,6 +26,42 @@ const ProductDetailsPage = () => {
           title
           descriptionHtml
           handle
+          features: metafield(namespace: "custom", key: "features") {
+            id
+            type
+            references(first: 10) {
+              nodes {
+                ... on Metaobject {
+                  id
+                  handle
+                  type
+                  fields {
+                    key
+                    value
+                    type
+                  }
+                }
+              }
+            }
+          }
+          care_instructions: metafield(namespace: "custom", key: "care_instructions") {
+            id
+            type
+            references(first: 10) {
+              nodes {
+                ... on Metaobject {
+                  id
+                  handle
+                  type
+                  fields {
+                    key
+                    value
+                    type
+                  }
+                }
+              }
+            }
+          }
           priceRange {
             minVariantPrice {
               amount
@@ -104,7 +140,7 @@ const ProductDetailsPage = () => {
         <span className="breadcrumb-sep">/</span>
         <span>{product.title}</span>
       </div>
-      <div className="grid grid-cols-1 gap-20 md:grid-cols-2 max-w-6xl mx-auto py-20 px-12 mb-12">
+      <div className="grid grid-cols-1 gap-20 md:grid-cols-2 max-w-7xl mx-auto py-20 px-12 mb-12">
         <ProductGallery product={product} />
         <ProductDetails product={product} isAvailable={isAvailable} handleAddToCart={handleAddToCart} />
       </div>

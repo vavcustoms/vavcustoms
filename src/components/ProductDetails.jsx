@@ -1,6 +1,12 @@
+import { useState } from "react";
 import { Link } from "react-router";
 
 const ProductDetails = ({ product, isAvailable, handleAddToCart }) => {
+  const [activeTab, setActiveTab] = useState("description");
+
+  const features = product?.features?.references?.nodes ?? [];
+  const careInstructions = product?.care_instructions?.references?.nodes ?? [];
+
   return (
     <div className="product-details">
       <p className={`font-mono text-xs uppercase mb-2 ${isAvailable ? "text-green-700" : "text-red-700"}`}>
@@ -25,20 +31,49 @@ const ProductDetails = ({ product, isAvailable, handleAddToCart }) => {
       >
         Request Custom Version
       </Link>
-      <div className="mt-10">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore vero quidem ut possimus officiis nihil cupiditate
-        in, tenetur distinctio dolorum corrupti asperiores error temporibus quis fuga, unde hic officia beatae! Lorem, ipsum
-        dolor sit amet consectetur adipisicing elit. Veritatis aliquid doloribus, assumenda, error illo minima blanditiis
-        numquam, laborum repellendus voluptas facere consequatur aperiam deserunt accusantium vero enim eum sed iure. Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Iure dolor atque qui repellendus dicta sint in voluptates ipsum,
-        animi, exercitationem praesentium harum aspernatur nemo reiciendis repudiandae mollitia hic perspiciatis laborum?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo non placeat, accusantium voluptas perspiciatis hic
-        repellendus, iure illo, labore dolorem earum id eum nulla vero! A itaque neque veniam delectus. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Deserunt quae aperiam, laborum harum praesentium porro minus qui quo libero
-        deleniti provident cupiditate impedit vitae rem odio ullam iure quia beatae? Lorem ipsum dolor sit, amet consectetur
-        adipisicing elit. Explicabo, facere nobis sed, sequi ipsum magnam consequatur soluta cupiditate perspiciatis natus
-        quibusdam facilis ducimus provident voluptate optio enim excepturi obcaecati dolore.
+      <div className="mt-8">
+        <div className="flex gap-4 border-b border-mutedbrown/20">
+          <button
+            onClick={() => setActiveTab("description")}
+            className={`cursor-pointer py-3 text-sm uppercase -mb-px border-b-2 ${activeTab === "description" ? "text-brand-600 border-brand-600" : "border-transparent hover:border-brand-600"}`}
+          >
+            Description
+          </button>
+          <button
+            onClick={() => setActiveTab("features")}
+            className={`cursor-pointer py-3 text-sm uppercase -mb-px border-b-2 ${activeTab === "features" ? "text-brand-600 border-brand-600" : "border-transparent hover:border-brand-600"}`}
+          >
+            Features
+          </button>
+          <button
+            onClick={() => setActiveTab("care")}
+            className={`cursor-pointer py-3 text-sm uppercase -mb-px border-b-2 ${activeTab === "care" ? "text-brand-600 border-b-2 border-brand-600" : "border-transparent hover:border-brand-600"}`}
+          >
+            Care Instructions
+          </button>
+        </div>
       </div>
+      {activeTab === "description" && (
+        <div className="mt-8 leading-7" dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
+      )}
+      {activeTab === "features" && (
+        <div className="mt-8">
+          <ul className="list-disc list-inside space-y-3">
+            {features.map((feature) => (
+              <li key={feature.id}>{feature.fields[0].value}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {activeTab === "care" && (
+        <div className="mt-8">
+          <ul className="list-disc list-inside space-y-3">
+            {careInstructions.map((instruction) => (
+              <li key={instruction.id}>{instruction.fields[0].value}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
