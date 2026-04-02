@@ -32,22 +32,22 @@ const ProductDetails = ({ product, isAvailable, handleAddToCart }) => {
         Request Custom Version
       </Link>
       <div className="mt-8">
-        <div className="flex gap-4 border-b border-mutedbrown/20">
+        <div className="flex gap-3 md:gap-4 border-b border-mutedbrown/20">
           <button
             onClick={() => setActiveTab("description")}
-            className={`cursor-pointer py-3 text-sm uppercase -mb-px border-b-2 ${activeTab === "description" ? "text-brand-600 border-brand-600" : "border-transparent hover:border-brand-600"}`}
+            className={`cursor-pointer py-3 text-xs md:text-sm uppercase -mb-px border-b-2 ${activeTab === "description" ? "text-brand-600 border-brand-600" : "border-transparent hover:border-brand-600"}`}
           >
             Description
           </button>
           <button
             onClick={() => setActiveTab("features")}
-            className={`cursor-pointer py-3 text-sm uppercase -mb-px border-b-2 ${activeTab === "features" ? "text-brand-600 border-brand-600" : "border-transparent hover:border-brand-600"}`}
+            className={`cursor-pointer py-3 text-xs md:text-sm uppercase -mb-px border-b-2 ${activeTab === "features" ? "text-brand-600 border-brand-600" : "border-transparent hover:border-brand-600"}`}
           >
             Features
           </button>
           <button
             onClick={() => setActiveTab("care")}
-            className={`cursor-pointer py-3 text-sm uppercase -mb-px border-b-2 ${activeTab === "care" ? "text-brand-600 border-b-2 border-brand-600" : "border-transparent hover:border-brand-600"}`}
+            className={`cursor-pointer py-3 text-xs md:text-sm uppercase -mb-px border-b-2 ${activeTab === "care" ? "text-brand-600 border-b-2 border-brand-600" : "border-transparent hover:border-brand-600"}`}
           >
             Care Instructions
           </button>
