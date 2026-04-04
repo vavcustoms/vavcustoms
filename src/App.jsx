@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import HomePage from "@/pages/HomePage";
 import TheShopPage from "@/pages/TheShopPage";
 import CustomBuildPage from "@/pages/CustomBuildPage";
+import ServicesPage from "@/pages/ServicesPage";
 import StorePage from "@/pages/StorePage";
 import ProductDetailsPage from "@/pages/ProductDetailsPage";
 import NotFoundPage from "@/pages/NotFoundPage";
@@ -14,6 +15,7 @@ function App() {
         <Route index path="/" element={<HomePage />} />
         <Route path="the-shop" element={<TheShopPage />} />
         <Route path="custom-build" element={<CustomBuildPage />} />
+        <Route path="services" element={<ServicesPage />} />
         <Route path="store">
           <Route index element={<StorePage />} />
           <Route path=":handle" element={<ProductDetailsPage />} />

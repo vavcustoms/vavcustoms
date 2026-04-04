@@ -9,6 +9,7 @@ import grid1 from "@/assets/images/grid-images/bathroom2.jpeg";
 import grid2 from "@/assets/images/grid-images/cutting2.jpg";
 import grid3 from "@/assets/images/grid-images/shelf2.jpg";
 import grid4 from "@/assets/images/grid-images/table2.jpg";
+import BuildProcess from "@/components/BuildProcess";
 
 const TheShopPage = () => {
   return (
@@ -43,9 +44,9 @@ const TheShopPage = () => {
       {/* A GLIMPSE INTO THE SHOP */}
       <section className="py-28 px-12">
         <div className="max-w-screen-2xl mx-auto">
-          <div>
+          <div className="mb-10">
             <p className="section-label">What We Use</p>
-            <h2 className="section-title mb-10">Tools in the Shop</h2>
+            <h2 className="section-title">Tools in the Shop</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
@@ -131,36 +132,7 @@ const TheShopPage = () => {
           </div>
         </div>
       </section>
-      <section className="py-28 px-12 bg-lightbrown/60">
-        <div className="max-w-screen-2xl mx-auto">
-          <div>
-            <p className="section-label text-brand-700">How It Works</p>
-            <h2 className="section-title mb-10">The Build Process</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
-            <div className="p-8 bg-warmwhite/60">
-              <div className="font-mono text-xs text-brand-600 tracking-wide mb-1.5">01</div>
-              <h3 className="font-heading text-lg font-bold mb-1">Design</h3>
-              <p className="text-darkbrown/70">Discuss your project, dimensions, and desired finish.</p>
-            </div>
-            <div className="p-8 bg-warmwhite/60">
-              <div className="font-mono text-xs text-brand-600 tracking-wide mb-1.5">02</div>
-              <h3 className="font-heading text-lg font-bold mb-1">Material</h3>
-              <p className="text-darkbrown/70">Source the perfect wood for your project, ensuring the best quality.</p>
-            </div>
-            <div className="p-8 bg-warmwhite/60">
-              <div className="font-mono text-xs text-brand-600 tracking-wide mb-1.5">03</div>
-              <h3 className="font-heading text-lg font-bold mb-1">Build</h3>
-              <p className="text-darkbrown/70">Craft your project with precision and attention to detail.</p>
-            </div>
-            <div className="p-8 bg-warmwhite/60">
-              <div className="font-mono text-xs text-brand-600 tracking-wide mb-1.5">04</div>
-              <h3 className="font-heading text-lg font-bold mb-1">Finish</h3>
-              <p className="text-darkbrown/70">Apply the desired finish and prepare it for shipping or pick up.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <BuildProcess />
       <section className="py-28 px-12 bg-darkbrown">
         <div className="max-w-screen-2xl mx-auto">
           <div className="flex flex-wrap items-end justify-between gap-4 mb-12">

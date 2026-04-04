@@ -4,12 +4,12 @@ import Cart from "@/components/Cart";
 
 const Layout = ({ children }) => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <header>
         <Navbar />
       </header>
 
-      <main>{children}</main>
+      <main className="flex flex-col h-full grow">{children}</main>
 
       <Footer />
       <Cart />

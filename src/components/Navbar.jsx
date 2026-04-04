@@ -57,6 +57,14 @@ const Navbar = () => {
               Custom Build
             </NavLink>
             <NavLink
+              to="/services"
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) => `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
+              prefetch="none"
+            >
+              Services
+            </NavLink>
+            <NavLink
               to="/store"
               onClick={() => setIsOpen(false)}
               className={({ isActive }) => `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
