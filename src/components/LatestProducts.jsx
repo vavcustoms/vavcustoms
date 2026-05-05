@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import { MoveRight } from "lucide-react";
 import { shopifyClient } from "@/utils/shopifyClient";
 import ProductCard from "@/components/ProductCard";
 
@@ -11,12 +12,16 @@ const LatestProducts = () => {
     const getProducts = async () => {
       const query = `
         query {
-          products(first: 3) {
+          products(first: 4) {
             edges {
               node {
                 id
                 title
                 handle
+                category {
+                  id
+                  name
+                }
                 priceRange {
                   minVariantPrice {
                     amount
@@ -64,10 +69,6 @@ const LatestProducts = () => {
     getProducts();
   }, []);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
   return (
     <section className="py-28 px-12">
       <div className="max-w-screen-2xl mx-auto">
@@ -76,14 +77,28 @@ const LatestProducts = () => {
             <p className="section-label">Available Now</p>
             <h2 className="section-title">Latest Products</h2>
           </div>
-          <Link to="/store" className="btn btn-dark" prefetch="none">
+          <Link to="/store" className="btn btn-secondary" prefetch="none">
             View All
+            <MoveRight size={12} />
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-lightbrown">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+          {loading
+            ? [...Array(4)].map((_, i) => (
+                <div key={i} className="bg-white border border-dark-muted/30 rounded-md overflow-hidden animate-pulse">
+                  <div className="h-64 bg-dark-muted/10" />
+                  <div className="px-5 pt-4 pb-5 space-y-3">
+                    <div className="h-3 bg-dark-muted/10 rounded w-1/3" />
+                    <div className="flex items-center gap-2">
+                      <div className="h-5 bg-dark-muted/10 rounded w-3/4" />
+                      <div className="h-5 bg-dark-muted/10 rounded w-1/4" />
+                    </div>
+                    <div className="h-px bg-dark-muted/20" />
+                    <div className="h-9 bg-dark-muted/10 rounded" />
+                  </div>
+                </div>
+              ))
+            : products.map((product) => <ProductCard key={product.id} product={product} />)}
         </div>
       </div>
     </section>

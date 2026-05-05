@@ -3,7 +3,8 @@ import { Link, useParams } from "react-router";
 import { shopifyClient } from "@/utils/shopifyClient";
 import { useCart } from "@/context/CartContext";
 import ProductGallery from "@/components/ProductGallery";
-import ProductDetails from "../components/ProductDetails";
+import ProductDetails from "@/components/ProductDetails";
+import ProductShopMore from "@/components/ProductShopMore";
 
 const ProductDetailsPage = () => {
   const { handle } = useParams();
@@ -129,21 +130,18 @@ const ProductDetailsPage = () => {
 
   return (
     <>
-      <div className="mt-16.5 font-mono text-xs bg-lightbrown/60 border-b border-lightbrown py-5 px-12 flex items-center gap-4">
-        <Link
-          to="/store"
-          className="text-mutedbrown hover:text-darkbrown transition duration-150 ease-in-out"
-          prefetch="none"
-        >
+      <div className="fixed w-full mt-16.5 text-xs bg-lightgray border-y border-midgray py-5 px-12 flex items-center gap-4 z-100">
+        <Link to="/store" className="hover:text-dark/80 transition duration-150 ease-in-out" prefetch="none">
           Store
         </Link>
         <span className="breadcrumb-sep">/</span>
         <span>{product.title}</span>
       </div>
-      <div className="grid grid-cols-1 gap-20 md:grid-cols-2 max-w-7xl mx-auto py-20 px-12 mb-12">
-        <ProductGallery product={product} />
+      <div className="grid grid-cols-1 gap-20 md:grid-cols-2 max-w-7xl mx-auto py-20 px-12 mt-24">
+        <ProductGallery key={product.id} product={product} />
         <ProductDetails product={product} isAvailable={isAvailable} handleAddToCart={handleAddToCart} />
       </div>
+      <ProductShopMore />
     </>
   );
 };

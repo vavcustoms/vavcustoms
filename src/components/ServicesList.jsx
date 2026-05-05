@@ -12,7 +12,7 @@ const ServicesList = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="p-10">
             <div className="mb-8">
-              <p className="font-mono text-xs text-brand-600 uppercase">01</p>
+              <p className="text-xs text-brand-600 uppercase">01</p>
               <h3 className="font-heading text-4xl font-bold leading-tight">Custom Furniture</h3>
             </div>
             <p className="text-dark-mid leading-relaxed mb-6">
@@ -26,8 +26,8 @@ const ServicesList = () => {
               <li>Matching sets for room renovations</li>
               <li>Cutting boards & charcuterie boards</li>
             </ul>
-            <div className="flex items-baseline gap-2 pt-6 border-t border-mutedbrown/20">
-              <p className="font-mono text-xs tracking-widest uppercase text-dark-mid">Starting from</p>
+            <div className="flex items-baseline gap-2 pt-6 border-t border-dark-muted/20">
+              <p className="text-xs tracking-widest uppercase text-dark-mid">Starting from</p>
               <p className="text-2xl font-bold">$350</p>
             </div>
           </div>
@@ -39,7 +39,7 @@ const ServicesList = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="p-10">
             <div className="mb-8">
-              <p className="font-mono text-xs text-brand-600 uppercase">02</p>
+              <p className="text-xs text-brand-600 uppercase">02</p>
               <h3 className="font-heading text-4xl font-bold leading-tight">CNC Machining</h3>
             </div>
             <p className="text-dark-mid leading-relaxed mb-6">
@@ -53,8 +53,8 @@ const ServicesList = () => {
               <li>Matching sets for room renovations</li>
               <li>Cutting boards & charcuterie boards</li>
             </ul>
-            <div className="flex items-baseline gap-2 pt-6 border-t border-mutedbrown/20">
-              <p className="font-mono text-xs tracking-widest uppercase text-dark-mid">Starting from</p>
+            <div className="flex items-baseline gap-2 pt-6 border-t border-dark-muted/20">
+              <p className="text-xs tracking-widest uppercase text-dark-mid">Starting from</p>
               <p className="text-2xl font-bold">$350</p>
             </div>
           </div>
@@ -70,7 +70,7 @@ const ServicesList = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="p-10">
             <div className="mb-8">
-              <p className="font-mono text-xs text-brand-600 uppercase">03</p>
+              <p className="text-xs text-brand-600 uppercase">03</p>
               <h3 className="font-heading text-4xl font-bold leading-tight">Vanities & Cabinets</h3>
             </div>
             <p className="text-dark-mid leading-relaxed mb-6">
@@ -84,8 +84,8 @@ const ServicesList = () => {
               <li>Matching sets for room renovations</li>
               <li>Cutting boards & charcuterie boards</li>
             </ul>
-            <div className="flex items-baseline gap-2 pt-6 border-t border-mutedbrown/20">
-              <p className="font-mono text-xs tracking-widest uppercase text-dark-mid">Starting from</p>
+            <div className="flex items-baseline gap-2 pt-6 border-t border-dark-muted/20">
+              <p className="text-xs tracking-widest uppercase text-dark-mid">Starting from</p>
               <p className="text-2xl font-bold">$350</p>
             </div>
           </div>

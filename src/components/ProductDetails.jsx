@@ -1,3 +1,4 @@
+import { Pen } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router";
 
@@ -8,12 +9,12 @@ const ProductDetails = ({ product, isAvailable, handleAddToCart }) => {
   const careInstructions = product?.care_instructions?.references?.nodes ?? [];
 
   return (
-    <div className="product-details">
-      <p className={`font-mono text-xs uppercase mb-2 ${isAvailable ? "text-green-700" : "text-red-700"}`}>
+    <div>
+      <p className={`text-xxs uppercase ${isAvailable ? "text-green-700" : "text-red-700"}`}>
         {isAvailable ? "In Stock" : "Out of Stock"}
       </p>
       <h1 className="font-heading font-bold text-4xl mb-2">{product.title}</h1>
-      <div className="h-px bg-lightbrown my-6"></div>
+      <div className="h-px bg-midgray my-6"></div>
       <p className="font-heading text-3xl font-semibold mb-6">
         ${Number(product.priceRange.minVariantPrice.amount)?.toFixed(2)}
       </p>
@@ -29,25 +30,25 @@ const ProductDetails = ({ product, isAvailable, handleAddToCart }) => {
         className="btn btn-secondary text-center w-full border-mutedbrown text-mutedbrown hover:border-brand-500 hover:text-brand-500"
         prefetch="none"
       >
-        Request Custom Version
+        Request Custom Version <Pen size={14} />
       </Link>
       <div className="mt-8">
-        <div className="flex gap-3 md:gap-4 border-b border-mutedbrown/20">
+        <div className="flex gap-3 md:gap-4 border-b border-dark/70">
           <button
             onClick={() => setActiveTab("description")}
-            className={`cursor-pointer py-3 text-xs md:text-sm uppercase -mb-px border-b-2 ${activeTab === "description" ? "text-brand-600 border-brand-600" : "border-transparent hover:border-brand-600"}`}
+            className={`cursor-pointer py-3 text-xs uppercase -mb-px border-b-2 ${activeTab === "description" ? "text-brand-600 border-brand-600" : "text-dark/70 border-transparent hover:border-brand-600"}`}
           >
             Description
           </button>
           <button
             onClick={() => setActiveTab("features")}
-            className={`cursor-pointer py-3 text-xs md:text-sm uppercase -mb-px border-b-2 ${activeTab === "features" ? "text-brand-600 border-brand-600" : "border-transparent hover:border-brand-600"}`}
+            className={`cursor-pointer py-3 text-xs md:text-sm uppercase -mb-px border-b-2 ${activeTab === "features" ? "text-brand-600 border-brand-600" : "text-dark/70 border-transparent hover:border-brand-600"}`}
           >
             Features
           </button>
           <button
             onClick={() => setActiveTab("care")}
-            className={`cursor-pointer py-3 text-xs md:text-sm uppercase -mb-px border-b-2 ${activeTab === "care" ? "text-brand-600 border-b-2 border-brand-600" : "border-transparent hover:border-brand-600"}`}
+            className={`cursor-pointer py-3 text-xs md:text-sm uppercase -mb-px border-b-2 ${activeTab === "care" ? "text-brand-600 border-b-2 border-brand-600" : "text-dark/70 border-transparent hover:border-brand-600"}`}
           >
             Care Instructions
           </button>

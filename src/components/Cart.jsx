@@ -33,13 +33,13 @@ const Cart = () => {
           <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
             <div
               onClick={(e) => e.stopPropagation()}
-              className={`pointer-events-auto w-screen max-w-md transform transition-transform duration-300 ease-in-out ${isCartOpen ? "translate-x-0" : "translate-x-full"}`}
+              className={`bg-white pointer-events-auto w-screen max-w-md transform transition-transform duration-300 ease-in-out ${isCartOpen ? "translate-x-0" : "translate-x-full"}`}
             >
-              <div className="flex h-full flex-col overflow-y-scroll bg-warmwhite border-l border-darkbrown/90 shadow-xl">
+              <div className="flex h-full flex-col overflow-y-scroll bg-warmwhite border-l border-midgray/90 shadow-xl">
                 <div className="flex-1 overflow-y-auto">
-                  <div className="bg-darkbrown flex items-center justify-between px-4 py-6 sm:px-6">
+                  <div className="bg-lightgray flex items-center justify-between px-4 py-6 sm:px-6">
                     <div>
-                      <h2 className="font-mono text-brand-500 text-sm uppercase" id="slide-over-title">
+                      <h2 className="text-brand-500 text-sm uppercase" id="slide-over-title">
                         Your Cart
                       </h2>
                       <p className="text-warmwhite">
@@ -50,7 +50,7 @@ const Cart = () => {
                       <button
                         type="button"
                         onClick={closeCart}
-                        className="relative cursor-pointer -m-2 p-2 text-lightbrown hover:text-lightbrown/80 transition duration-150 ease-in-out"
+                        className="relative cursor-pointer -m-2 p-2 text-dark hover:text-dark/80 transition duration-150 ease-in-out"
                       >
                         <span className="absolute -inset-0.5"></span>
                         <span className="sr-only">Close panel</span>
@@ -72,23 +72,23 @@ const Cart = () => {
                       <ul role="list" className="-my-6 divide-y divide-gray-200">
                         {items.length === 0 ? (
                           <div className="flex flex-col items-center justify-center py-8">
-                            <ShoppingCart size={36} strokeWidth={1} className="text-mutedbrown/30 mb-2" />
+                            <ShoppingCart size={36} strokeWidth={1} className="text-dark-mid/30 mb-2" />
                             <p className="font-heading font-bold text-xl mb-2">Your cart is empty.</p>
-                            <p className="text-mutedbrown text-sm">Start shopping to add items to your cart.</p>
+                            <p className="text-dark-mid text-sm">Start shopping to add items to your cart.</p>
                             <Link onClick={closeCart} to="/store" className="btn btn-primary mt-4">
                               Shop Now
                             </Link>
                           </div>
                         ) : (
                           items.map((item) => (
-                            <li key={item.variantId} className="py-6 border-b border-mutedbrown/20">
+                            <li key={item.variantId} className="py-6 border-b border-midgray/20">
                               <div className="flex px-4 sm:px-6">
                                 <div className="size-24 shrink-0 overflow-hidden">
                                   {item.image ? (
                                     <img src={item.image} alt={item.title} className="size-full object-cover" />
                                   ) : (
-                                    <div className="size-full bg-mutedbrown flex items-center justify-center">
-                                      <span className="text-darkbrown text-xs">No image</span>
+                                    <div className="size-full bg-lightgray flex items-center justify-center">
+                                      <span className="text-xs">No image</span>
                                     </div>
                                   )}
                                 </div>
@@ -113,14 +113,14 @@ const Cart = () => {
                                     <div className="flex items-center space-x-2">
                                       <button
                                         onClick={() => handleQuantityChange(item.variantId, item.quantity - 1)}
-                                        className="cursor-pointer w-6 h-6 flex items-center justify-center border border-mutedbrown hover:border-mutedbrown/60 transition duration-150 ease-in-out"
+                                        className="cursor-pointer w-6 h-6 flex items-center justify-center border border-midgray hover:border-migray/60 transition duration-150 ease-in-out"
                                       >
                                         -
                                       </button>
                                       <span className="text-dark-mid min-w-8 text-center">Qty {item.quantity}</span>
                                       <button
                                         onClick={() => handleQuantityChange(item.variantId, item.quantity + 1)}
-                                        className="cursor-pointer w-6 h-6 flex items-center justify-center border border-mutedbrown hover:border-mutedbrown/60 transition duration-150 ease-in-out"
+                                        className="cursor-pointer w-6 h-6 flex items-center justify-center border border-midgray hover:border-midgray/60 transition duration-150 ease-in-out"
                                       >
                                         +
                                       </button>
@@ -129,7 +129,7 @@ const Cart = () => {
                                       <button
                                         type="button"
                                         onClick={() => removeFromCart(item.variantId)}
-                                        className="cursor-pointer font-medium text-mutedbrown hover:text-mutedbrown/70 transition duration-150 ease-in-out"
+                                        className="cursor-pointer font-medium text-dark-mid hover:text-dark-mid/70 transition duration-150 ease-in-out"
                                       >
                                         Remove
                                       </button>
@@ -144,7 +144,7 @@ const Cart = () => {
                     </div>
                   </div>
                 </div>
-                <div className="border-t border-mutedbrown/20 px-4 py-6 sm:px-6">
+                <div className="border-t border-midgray px-4 py-6 sm:px-6">
                   <div className="flex justify-between text-base font-medium">
                     <p>Subtotal</p>
                     <p>${getCartTotal().toFixed(2)}</p>
@@ -154,7 +154,7 @@ const Cart = () => {
                     <button
                       onClick={handleCheckout}
                       disabled={items.length === 0}
-                      className="btn btn-dark w-full disabled:bg-mutedbrown disabled:cursor-not-allowed"
+                      className="btn btn-dark w-full disabled:bg-dark/60 disabled:border-dark/60 disabled:cursor-not-allowed"
                     >
                       Checkout
                     </button>
