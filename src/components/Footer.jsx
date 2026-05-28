@@ -1,5 +1,5 @@
 import BlueprintBg from "@/components/BlueprintBg";
-import miniLogo from "@/assets/images/mini-logo.svg";
+import miniLogo from "@/assets/images/1.png";
 import { Copyright } from "lucide-react";
 
 const Footer = () => {
@@ -10,11 +10,10 @@ const Footer = () => {
         <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="text-start">
             <div className="flex items-center gap-2 mb-4">
-              <img className="w-auto h-6 sm:h-7" src={miniLogo} alt="VAV Customs Logo" />
-              <h2 className="font-heading font-bold text-4xl">VAV Customs</h2>
+              <img className="w-36" src={miniLogo} alt="VAV Customs Logo" />
             </div>
             <p className="text-dark/70 max-w-md">
-              Custom woodworking and CNC machining — built the way you imagined it, with the quality you deserve.
+              Custom woodworking and CNC machining, built the way you imagined it, with the quality you deserve.
             </p>
           </div>
           <div>

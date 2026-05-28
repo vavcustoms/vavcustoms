@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router";
 import { Menu, X, ShoppingCart } from "lucide-react";
-import miniLogo from "@/assets/images/mini-logo.svg";
+import miniLogo from "@/assets/images/1.png";
 import CartIcon from "@/components/CartIcon";
 
 const Navbar = () => {
@@ -16,8 +16,7 @@ const Navbar = () => {
       <div className="px-6 py-4 h-16.5 mx-auto flex justify-between items-center">
         <div className="flex items-center justify-between w-full md:w-auto">
           <Link className="flex items-center gap-1" to="/">
-            <img className="w-auto h-6 sm:h-7" src={miniLogo} alt="VAV Customs Logo" />
-            <p className="font-heading font-bold">VAV Customs</p>
+            <img className="w-26" src={miniLogo} alt="VAV Customs Logo" />
           </Link>
           <div className="flex md:hidden">
             <button

@@ -1,4 +1,5 @@
 import shelf from "@/assets/images/grid-images/shelf2.jpg";
+import cnc from "@/assets/images/services_cnc.jpg";
 import bathroom from "@/assets/images/grid-images/bathroom1.jpg";
 
 const ServicesList = () => {
@@ -61,8 +62,8 @@ const ServicesList = () => {
           <div className="order-first relative overflow-hidden min-h-full">
             <img
               className="absolute inset-0 h-full w-full object-cover object-bottom"
-              src="https://images.unsplash.com/photo-1738709307364-3d0626677c9c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Wood Shelf"
+              src={cnc}
+              alt="Bakery Sign made from wood"
             />
           </div>
         </div>
