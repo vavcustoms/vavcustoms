@@ -1,7 +1,7 @@
 import { Link } from "react-router";
-import tableImg from "@/assets/images/grid-images/table1.jpg";
-import cuttingBoardImg from "@/assets/images/grid-images/cutting1.jpg";
-import vanityImg from "@/assets/images/grid-images/vanity1.jpg";
+import tableImg from "@/assets/images/custom-work-furniture.jpg";
+import bakeryImg from "@/assets/images/custom-work-cnc.jpg";
+import vanityImg from "@/assets/images/custom-work-vanity.jpg";
 
 const CustomWork = () => {
   return (
@@ -15,15 +15,15 @@ const CustomWork = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
           <div className="relative">
-            <img className="w-full h-auto" src={tableImg} alt="Custom coffee table" loading="lazy" />
+            <img className="w-full h-full object-cover" src={tableImg} alt="Custom coffee table" loading="lazy" />
             <h3 className="font-semibold text-white/60 bg-dark px-4 py-2 absolute bottom-0 left-0">Furniture</h3>
           </div>
           <div className="relative">
-            <img className="w-full h-auto" src={cuttingBoardImg} alt="Custom cutting board" loading="lazy" />
+            <img className="w-full h-full *:" src={bakeryImg} alt="Custom cutting board" loading="lazy" />
             <h3 className="font-semibold text-white/60 bg-dark px-4 py-2 absolute bottom-0 left-0">CNC Projects</h3>
           </div>
           <div className="relative">
-            <img className="w-full h-auto" src={vanityImg} alt="Custom bathroom vanity" loading="lazy" />
+            <img className="w-full h-full object-cover" src={vanityImg} alt="Custom bathroom vanity" loading="lazy" />
             <h3 className="font-semibold text-white/60 bg-dark px-4 py-2 absolute bottom-0 left-0">Cabinets/Vanities</h3>
           </div>
         </div>
